@@ -15,6 +15,7 @@ import nl.finalist.liferay.oidc.settings.internal.constants.PortalSettingsOidcCo
 /**
  * Form contributor for the Virtual Instance's 'Instance Settings'.
  * To be used together with the OCD class and its *BeanDeclaration and *PidMapping.
+ * Is OCD another abbreviation for OIDC?
  */
 @Component(immediate = true,
     property = {
