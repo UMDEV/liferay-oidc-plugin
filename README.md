@@ -1,4 +1,4 @@
-# OpenID Connect Liferay plugin ![alt=travis ci status](https://api.travis-ci.org/finalist/liferay-oidc-plugin.svg?branch=master)
+# OpenID Connect Liferay plugin - forked for redirect fix
 
 This plugin uses the OpenID Connect protocol to make Liferay use external authentication sources like social networks and SSO systems.
 It is [available in the Liferay Marketplace](https://web.liferay.com/marketplace/-/mp/application/78695724).
@@ -8,6 +8,9 @@ It is [available in the Liferay Marketplace](https://web.liferay.com/marketplace
 
 The OpenID Connect protocol delegates authentication to a so called Provider, and supplies the requesting application (in our case: Liferay) with an access token (like a temporary, restricted password) to request additional user information.
  With this user information, a Liferay-account is created if it does not exist, and to Liferay the user authentication is confirmed. 
+
+## Fork Purpose
+To fix the login redirect behavior after SSO successfully completes (stop redirecting to /home, and use the liferay login portlet's redirect parameter and session variable). This port also disables the autogeneration of new user screennames, and instead determines the screenname using the username of the user's email address received from SSO OIDC data.
 
 ### Components
 
